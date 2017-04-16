@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <%- include('../complete-package/head.ejs')%>
+</head>
+<body>
+  <header>
+  <%- include('../complete-package/header.ejs')%>
+  </header>
+  <section>
+    <% samploniens.map(function(samplonien){ %>
+      <a href= <%= "/projects/" + samplonien.id %> ><p><%= samplonien.name%></p></a>
+    <% })%>
+  </section>
+</body>
+</html>

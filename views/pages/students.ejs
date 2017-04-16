@@ -4,21 +4,19 @@
   <%- include('../complete-package/head.ejs')%>
 </head>
 <body>
+
   <header>
     <%- include('../complete-package/header.ejs')%>
   </header>
   <section>
-
-    <p><%= samplonien.id%></p>
-    <img id="image" src="<%= samplonien.image%>"/>
-    <p><%= samplonien.userId%></p>
-    <p><%= samplonien.name%></p>
-    <p><%= samplonien.githubUrl %></p>
-    <p><%= samplonien.githubRepo%></p>
-
+    <% students.map(function(names){ %>
+      <a href= <%= "/users/" + names.id %>><p><%= names.firstName%></p></a>
+    <% })%>
   </section>
+
   <footer>
     <%- include('../complete-package/footer.ejs')%>
   </footer>
+
 </body>
 </html>
